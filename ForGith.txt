@@ -1,1 +1,540 @@
 appppppp
+C:\Users\user\Desktop\GitApple>git init
+Initialized empty Git repository in C:/Users/user/Desktop/GitApple/.git/
+
+C:\Users\user\Desktop\GitApple>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        TextDoc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\user\Desktop\GitApple>git add .
+
+C:\Users\user\Desktop\GitApple>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   TextDoc.txt
+
+
+C:\Users\user\Desktop\GitApple>git commit -m "OneCommit"
+[master (root-commit) eb567c6] OneCommit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 TextDoc.txt
+
+C:\Users\user\Desktop\GitApple>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   TextDoc.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\user\Desktop\GitApple>git add .
+
+C:\Users\user\Desktop\GitApple>git commit -m "TwoCommit"
+[master 7a397e8] TwoCommit
+ 1 file changed, 1 insertion(+)
+
+C:\Users\user\Desktop\GitApple>git log
+commit 7a397e89ea95574c452429c38914b8bf288898f2 (HEAD -> master)
+Author: Анастасия Колесниченко <71977374+Anasty-Sova@users.noreply.github.com>
+Date:   Sat Sep 10 09:34:52 2022 +0300
+
+    TwoCommit
+
+commit eb567c6b6e539bc2c94b13db397beb8a76b5431e
+Author: Анастасия Колесниченко <71977374+Anasty-Sova@users.noreply.github.com>
+Date:   Sat Sep 10 09:32:00 2022 +0300
+
+    OneCommit
+
+C:\Users\user\Desktop\GitApple>git branch MyBranch1
+
+C:\Users\user\Desktop\GitApple>git branch
+  MyBranch1
+* master
+
+C:\Users\user\Desktop\GitApple>git add .
+
+C:\Users\user\Desktop\GitApple>git commit -m "CreateBranch"
+[master 3bc96dd] CreateBranch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\user\Desktop\GitApple>git chechkout Mybranch1
+git: 'chechkout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+C:\Users\user\Desktop\GitApple>git checkout MyBranch1
+Switched to branch 'MyBranch1'
+
+C:\Users\user\Desktop\GitApple>git status
+On branch MyBranch1
+nothing to commit, working tree clean
+
+C:\Users\user\Desktop\GitApple>git branche
+git: 'branche' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git add .
+
+C:\Users\user\Desktop\GitApple>git checkout
+A       TextDoc2.txt
+
+C:\Users\user\Desktop\GitApple>git status
+On branch MyBranch1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   TextDoc2.txt
+
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git commit -m "3Commit"
+[MyBranch1 31bb610] 3Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 TextDoc2.txt
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git checkout Master
+Switched to branch 'Master'
+
+C:\Users\user\Desktop\GitApple>git checkout
+
+C:\Users\user\Desktop\GitApple>git branch
+  MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git branch
+  MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git checkout master
+Switched to branch 'master'
+
+C:\Users\user\Desktop\GitApple>git branch
+  MyBranch1
+* master
+
+C:\Users\user\Desktop\GitApple>git branch MyBranch1
+fatal: a branch named 'MyBranch1' already exists
+
+C:\Users\user\Desktop\GitApple>git merge MyBranch1
+Merge made by the 'ort' strategy.
+ TextDoc2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 TextDoc2.txt
+
+C:\Users\user\Desktop\GitApple>git log
+commit 95a3768d0317de7f599a3ac6c2b29eb64dc6ad04 (HEAD -> master)
+Merge: 3bc96dd 31bb610
+Author: Анастасия Колесниченко <71977374+Anasty-Sova@users.noreply.github.com>
+Date:   Sat Sep 10 09:51:22 2022 +0300
+
+    Merge branch 'MyBranch1'
+
+commit 31bb610319407cc0cbdf7c239aba76ba636a1a76 (MyBranch1)
+Author: Анастасия Колесниченко <71977374+Anasty-Sova@users.noreply.github.com>
+Date:   Sat Sep 10 09:48:05 2022 +0300
+
+    3Commit
+
+commit 3bc96ddf84070aafa625c2765180f6ec49a8b0bc
+Author: Анастасия Колесниченко <71977374+Anasty-Sova@users.noreply.github.com>
+Date:   Sat Sep 10 09:41:26 2022 +0300
+
+    CreateBranch
+
+commit 7a397e89ea95574c452429c38914b8bf288898f2
+Author: Анастасия Колесниченко <71977374+Anasty-Sova@users.noreply.github.com>
+Date:   Sat Sep 10 09:34:52 2022 +0300
+
+    TwoCommit
+
+commit eb567c6b6e539bc2c94b13db397beb8a76b5431e
+Author: Анастасия Колесниченко <71977374+Anasty-Sova@users.noreply.github.com>
+Date:   Sat Sep 10 09:32:00 2022 +0300
+
+    OneCommit
+
+C:\Users\user\Desktop\GitApple>git checkout master
+Already on 'master'
+
+C:\Users\user\Desktop\GitApple>git checkout MyBranch1
+Switched to branch 'MyBranch1'
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git branch
+* MyBranch1
+  master
+
+C:\Users\user\Desktop\GitApple>git checkout master
+Switched to branch 'master'
+
+C:\Users\user\Desktop\GitApple>git branch
+  MyBranch1
+* master
+
+C:\Users\user\Desktop\GitApple>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\user\Desktop\GitApple>git branch MyBranch2
+
+C:\Users\user\Desktop\GitApple>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\user\Desktop\GitApple>git add .
+
+C:\Users\user\Desktop\GitApple>git commit -m "commit conflict file"
+[master 7baecd5] commit conflict file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 MyFatalFile.txt
+
+C:\Users\user\Desktop\GitApple>git status\
+git: 'status\' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+C:\Users\user\Desktop\GitApple>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\user\Desktop\GitApple>git checkout MyBranch2
+Switched to branch 'MyBranch2'
+
+C:\Users\user\Desktop\GitApple>git add .
+
+C:\Users\user\Desktop\GitApple>git commit -m "create fatal file branch 2"
+[MyBranch2 aae01a6] create fatal file branch 2
+ 1 file changed, 2 insertions(+)
+ create mode 100644 MyFatalFile.txt
+
+C:\Users\user\Desktop\GitApple>git checkout master
+Switched to branch 'master'
+
+C:\Users\user\Desktop\GitApple>git merge
+fatal: No remote for the current branch.
+
+C:\Users\user\Desktop\GitApple>git merge master
+Already up to date.
+
+C:\Users\user\Desktop\GitApple>git merge MyBranch1
+Already up to date.
+
+C:\Users\user\Desktop\GitApple>git merge MyBranch2
+Auto-merging MyFatalFile.txt
+CONFLICT (add/add): Merge conflict in MyFatalFile.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\user\Desktop\GitApple>git branch
+  MyBranch1
+  MyBranch2
+* master
+
+C:\Users\user\Desktop\GitApple>git merge MyBranch2
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\Users\user\Desktop\GitApple>git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+tortoisemerge emerge vimdiff nvimdiff
+Merging:
+MyFatalFile.txt
+
+Normal merge conflict for 'MyFatalFile.txt':
+  {local}: created file
+  {remote}: created file
+Hit return to start merge resolution tool (vimdiff):
+3 files to edit
+
+C:\Users\user\Desktop\GitApple>git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   MyFatalFile.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+
+C:\Users\user\Desktop\GitApple>git add .
+
+C:\Users\user\Desktop\GitApple>git commit -m "ffds"
+[master edeaa7f] ffds
+
+C:\Users\user\Desktop\GitApple>git log --graph --decorate --oneline
+*   edeaa7f (HEAD -> master) ffds
+|\
+| * aae01a6 (MyBranch2) create fatal file branch 2
+* | 7baecd5 commit conflict file
+|/
+*   95a3768 Merge branch 'MyBranch1'
+|\
+| * 31bb610 (MyBranch1) 3Commit
+* | 3bc96dd CreateBranch
+|/
+* 7a397e8 TwoCommit
+* eb567c6 OneCommit
+
+C:\Users\user\Desktop\GitApple>git config --global user.name
+Анастасия Колесниченко
+
+C:\Users\user\Desktop\GitApple>git config --global user.name "GGOLUBEV"
+
+C:\Users\user\Desktop\GitApple>git config user.email golubevn898@gmail.com
+
+C:\Users\user\Desktop\GitApple>git config --global user.name
+GGOLUBEV
+
+C:\Users\user\Desktop\GitApple>git config user.email
+golubevn898@gmail.com
+
+C:\Users\user\Desktop\GitApple>git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+C:\Users\user\Desktop\GitApple>git remote add origin https://github.com/GGOLUBEV/10.09.22.git
+
+C:\Users\user\Desktop\GitApple>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\user\Desktop\GitApple>git checkout master
+Already on 'master'
+
+C:\Users\user\Desktop\GitApple>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin master
+remote: Permission to GGOLUBEV/10.09.22.git denied to kekerokk.
+fatal: unable to access 'https://github.com/GGOLUBEV/10.09.22.git/': The requested URL returned error: 403
+
+C:\Users\user\Desktop\GitApple>git config --global user.name
+GGOLUBEV
+
+C:\Users\user\Desktop\GitApple>git config user.email
+golubevn898@gmail.com
+
+C:\Users\user\Desktop\GitApple>git remote add origin https://github.com/GGOLUBEV/10.09.22.git
+error: remote origin already exists.
+
+C:\Users\user\Desktop\GitApple>git branch
+  MyBranch1
+  MyBranch2
+* master
+
+C:\Users\user\Desktop\GitApple>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin master
+remote: Permission to GGOLUBEV/10.09.22.git denied to kekerokk.
+fatal: unable to access 'https://github.com/GGOLUBEV/10.09.22.git/': The requested URL returned error: 403
+
+C:\Users\user\Desktop\GitApple>git remote set-url origin https://github.com/GGOLUBEV/10.09.22.git
+
+C:\Users\user\Desktop\GitApple>git branch
+  MyBranch1
+  MyBranch2
+* master
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin master
+remote: Permission to GGOLUBEV/10.09.22.git denied to kekerokk.
+fatal: unable to access 'https://github.com/GGOLUBEV/10.09.22.git/': The requested URL returned error: 403
+
+C:\Users\user\Desktop\GitApple>git config --global user.name
+GGOLUBEV
+
+C:\Users\user\Desktop\GitApple>git config user.name
+GGOLUBEV
+
+C:\Users\user\Desktop\GitApple>git remote set-url origin https://github.com/GGOLUBEV/new2.git
+
+C:\Users\user\Desktop\GitApple>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin master
+remote: Permission to GGOLUBEV/new2.git denied to kekerokk.
+fatal: unable to access 'https://github.com/GGOLUBEV/new2.git/': The requested URL returned error: 403
+
+C:\Users\user\Desktop\GitApple>git branch -M main
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/GGOLUBEV/new2.git'
+
+C:\Users\user\Desktop\GitApple>git remote set-url origin https://github.com/GGOLUBEV/new2.git
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/GGOLUBEV/new2.git'
+
+C:\Users\user\Desktop\GitApple>git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/GGOLUBEV/new2.git'
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin main
+remote: Permission to GGOLUBEV/new2.git denied to kekerokk.
+fatal: unable to access 'https://github.com/GGOLUBEV/new2.git/': The requested URL returned error: 403
+
+C:\Users\user\Desktop\GitApple>git remote set-url origin https://github.com/GGOLUBEV/new2.git
+
+C:\Users\user\Desktop\GitApple>git push -u origin main
+remote: Permission to GGOLUBEV/new2.git denied to kekerokk.
+fatal: unable to access 'https://github.com/GGOLUBEV/new2.git/': The requested URL returned error: 403
+
+C:\Users\user\Desktop\GitApple>
+C:\Users\user\Desktop\GitApple>it remote add origin https://github.com/GGOLUBEV/new2.git
+"it" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\Users\user\Desktop\GitApple>git remote add origin https://github.com/GGOLUBEV/new2.git
+error: remote origin already exists.
+
+C:\Users\user\Desktop\GitApple>git remote add origin https://github.com/GGOLUBEV/new2.git
+error: remote origin already exists.
+
+C:\Users\user\Desktop\GitApple>git remote set-url origin https://github.com/GGOLUBEV/new2.git
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/GGOLUBEV/new2.git'
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin maшт
+error: src refspec maшт does not match any
+error: failed to push some refs to 'https://github.com/GGOLUBEV/new2.git'
+
+C:\Users\user\Desktop\GitApple>git push --set-upstream origin main
+info: please complete authentication in your browser...
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (24/24), 2.07 KiB | 1.04 MiB/s, done.
+Total 24 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/GGOLUBEV/new2.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\user\Desktop\GitApple>git add .
+
+C:\Users\user\Desktop\GitApple>git commit -m "commit for git"
+[main a86fe47] commit for git
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ForGith.txt
+
+C:\Users\user\Desktop\GitApple>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 277 bytes | 277.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/GGOLUBEV/new2.git
+   edeaa7f..a86fe47  main -> main
